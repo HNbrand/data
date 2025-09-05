@@ -1,0 +1,39 @@
+Create a function called `generate_typing_test_result()` that simulates the output of a Typing Master test. The function should return a detailed summary of the test result including the following components:
+
+1. **Test ID**: A unique identifier for the test session (UUID or numeric).
+2. **User Info**:
+   - User ID or name (optional)
+   - Typing profile (beginner, intermediate, advanced)
+3. **Test Metadata**:
+   - Test duration in seconds
+   - Test difficulty level (easy, medium, hard, custom)
+   - Text type (random words, paragraphs, code, numbers)
+   - Timestamp of the test (ISO format)
+4. **Typing Metrics**:
+   - **Gross WPM (Words Per Minute)**: Total speed before errors
+   - **Net WPM**: Final speed after subtracting penalties for errors
+   - **Accuracy (%)**: Percentage of correct keystrokes
+   - **Characters typed**: Total typed characters (including errors)
+   - **Correct characters**: Total correctly typed characters
+   - **Incorrect characters**: Number of mistyped characters
+   - **Total words typed**
+5. **Error Breakdown**:
+   - List of most common mistakes (e.g., 'e' typed instead of 'r')
+   - Repeated errors (characters with 2+ mistakes)
+   - Missed words or skipped sections (if applicable)
+6. **Timing Breakdown (Optional)**:
+   - Average time per word
+   - Fastest word
+   - Slowest word
+7. **Skill Feedback**:
+   - Strengths (e.g., "Great accuracy, even under time pressure")
+   - Weaknesses (e.g., "Frequent typing errors on punctuation")
+   - Suggested improvement areas
+8. **Overall Rating**:
+   - A score out of 100
+   - Rank or badge (e.g., "Typing Ninja", "Speed Learner")
+9. **Export Options** (optional):
+   - Ability to export result to PDF, JSON, or shareable link
+
+Ensure the function is structured, consistent, and returns the data in a dictionary or structured object. The result should be suitable for display in a user interface or stored in a database.
+

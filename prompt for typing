@@ -1,3 +1,7 @@
+add prize pool estimate 1000 rupee(according views and budget add function that will moniter refrence user log in then spend 1 hour  for a month who so ever will give more refrences he will win price best
+trough this i  can get more views and i can add in google search engine that our website give money for typing best  
+
+
 Create a function called `generate_typing_test_result()` that simulates the output of a Typing Master test. The function should return a detailed summary of the test result including the following components:
 
 1. **Test ID**: A unique identifier for the test session (UUID or numeric).

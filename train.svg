@@ -1,0 +1,179 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Sky gradient -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#18233a"/>
+      <stop offset="35%" stop-color="#5f7fa0"/>
+      <stop offset="70%" stop-color="#f4b15a"/>
+      <stop offset="100%" stop-color="#f8d99a"/>
+    </linearGradient>
+
+    <!-- Mountain gradient -->
+    <linearGradient id="mountain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5f6f7d"/>
+      <stop offset="100%" stop-color="#26333f"/>
+    </linearGradient>
+
+    <!-- Train metal gradient -->
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111"/>
+      <stop offset="35%" stop-color="#3b3b3b"/>
+      <stop offset="65%" stop-color="#090909"/>
+      <stop offset="100%" stop-color="#555"/>
+    </linearGradient>
+
+    <!-- Gold reflection -->
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8a5a18"/>
+      <stop offset="50%" stop-color="#ffd36a"/>
+      <stop offset="100%" stop-color="#8a5a18"/>
+    </linearGradient>
+
+    <!-- Fog blur -->
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+
+    <!-- Smoke blur -->
+    <filter id="smokeBlur">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+
+    <!-- Glow -->
+    <filter id="sunGlow">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+
+  <!-- Background sky -->
+  <rect width="1200" height="700" fill="url(#sky)"/>
+
+  <!-- Sunrise glow -->
+  <circle cx="930" cy="165" r="65" fill="#ffd36a"/>
+  <circle cx="930" cy="165" r="120" fill="#ffd36a" opacity="0.25" filter="url(#sunGlow)"/>
+
+  <!-- Distant mountains -->
+  <path d="M0 390 L130 210 L250 370 L390 160 L560 390 L720 190 L900 390 L1040 230 L1200 395 L1200 700 L0 700 Z"
+        fill="url(#mountain)" opacity="0.85"/>
+
+  <path d="M0 430 L190 270 L360 430 L520 250 L700 430 L860 290 L1040 430 L1200 320 L1200 700 L0 700 Z"
+        fill="#1d2b34" opacity="0.9"/>
+
+  <!-- Snow highlights on mountains -->
+  <path d="M390 160 L345 270 L395 235 L435 280 Z" fill="#dfe8ee" opacity="0.75"/>
+  <path d="M720 190 L675 290 L725 255 L770 305 Z" fill="#dfe8ee" opacity="0.65"/>
+  <path d="M1040 230 L995 330 L1048 285 L1090 335 Z" fill="#dfe8ee" opacity="0.55"/>
+
+  <!-- Forest left -->
+  <g opacity="0.95">
+    <polygon points="70,500 105,390 140,500" fill="#0f3b2a"/>
+    <polygon points="120,505 160,365 205,505" fill="#123f2d"/>
+    <polygon points="190,510 235,380 280,510" fill="#0d3325"/>
+    <polygon points="270,510 310,370 355,510" fill="#164b35"/>
+    <polygon points="340,505 385,360 430,505" fill="#0f3b2a"/>
+  </g>
+
+  <!-- Forest right -->
+  <g opacity="0.95">
+    <polygon points="760,510 805,365 850,510" fill="#123f2d"/>
+    <polygon points="840,515 890,350 940,515" fill="#0f3b2a"/>
+    <polygon points="930,515 980,380 1030,515" fill="#164b35"/>
+    <polygon points="1010,520 1060,355 1110,520" fill="#0d3325"/>
+    <polygon points="1080,520 1135,370 1190,520" fill="#123f2d"/>
+  </g>
+
+  <!-- Valley fog -->
+  <ellipse cx="600" cy="430" rx="580" ry="70" fill="white" opacity="0.28" filter="url(#blur)"/>
+  <ellipse cx="500" cy="480" rx="460" ry="50" fill="white" opacity="0.18" filter="url(#blur)"/>
+  <ellipse cx="780" cy="520" rx="420" ry="45" fill="white" opacity="0.16" filter="url(#blur)"/>
+
+  <!-- Ground -->
+  <path d="M0 520 C260 480 470 520 680 500 C880 480 1040 510 1200 490 L1200 700 L0 700 Z"
+        fill="#203f2d"/>
+
+  <!-- Railway tracks perspective -->
+  <g>
+    <polygon points="420,700 555,475 575,475 500,700" fill="#4a3423"/>
+    <polygon points="705,700 625,475 645,475 790,700" fill="#4a3423"/>
+
+    <line x1="555" y1="475" x2="420" y2="700" stroke="#2c2c2c" stroke-width="10"/>
+    <line x1="640" y1="475" x2="790" y2="700" stroke="#2c2c2c" stroke-width="10"/>
+
+    <line x1="520" y1="535" x2="675" y2="535" stroke="#6b4a2b" stroke-width="8"/>
+    <line x1="495" y1="585" x2="710" y2="585" stroke="#6b4a2b" stroke-width="9"/>
+    <line x1="460" y1="650" x2="755" y2="650" stroke="#6b4a2b" stroke-width="10"/>
+
+    <!-- Wet track highlights -->
+    <line x1="560" y1="475" x2="430" y2="700" stroke="#d7c28a" stroke-width="2" opacity="0.7"/>
+    <line x1="635" y1="475" x2="780" y2="700" stroke="#d7c28a" stroke-width="2" opacity="0.7"/>
+  </g>
+
+  <!-- Steam smoke -->
+  <g filter="url(#smokeBlur)" opacity="0.85">
+    <circle cx="445" cy="235" r="45" fill="#f3f3f3"/>
+    <circle cx="390" cy="205" r="60" fill="#ffffff"/>
+    <circle cx="330" cy="180" r="75" fill="#eeeeee"/>
+    <circle cx="265" cy="165" r="55" fill="#ffffff"/>
+    <circle cx="210" cy="135" r="70" fill="#f5f5f5"/>
+  </g>
+
+  <!-- Train shadow -->
+  <ellipse cx="560" cy="535" rx="260" ry="45" fill="#000" opacity="0.35" filter="url(#blur)"/>
+
+  <!-- Train body -->
+  <g transform="translate(300,315)">
+    <!-- Main locomotive body -->
+    <rect x="120" y="80" width="330" height="95" rx="18" fill="url(#metal)"/>
+    <rect x="185" y="35" width="130" height="95" rx="10" fill="#151515"/>
+    <rect x="205" y="55" width="80" height="42" rx="4" fill="#9fb6c3" opacity="0.9"/>
+
+    <!-- Boiler front -->
+    <ellipse cx="455" cy="128" rx="55" ry="58" fill="#101010"/>
+    <ellipse cx="455" cy="128" rx="38" ry="40" fill="#333"/>
+    <circle cx="455" cy="128" r="14" fill="#ddd7be"/>
+
+    <!-- Chimney -->
+    <rect x="105" y="20" width="45" height="75" rx="8" fill="#111"/>
+    <ellipse cx="128" cy="22" rx="35" ry="12" fill="#222"/>
+
+    <!-- Cowcatcher -->
+    <polygon points="500,140 590,175 500,175" fill="#1a1a1a"/>
+    <line x1="515" y1="148" x2="575" y2="174" stroke="#777" stroke-width="3"/>
+    <line x1="520" y1="164" x2="585" y2="178" stroke="#777" stroke-width="3"/>
+
+    <!-- Golden details -->
+    <rect x="135" y="105" width="285" height="8" fill="url(#gold)" opacity="0.9"/>
+    <circle cx="128" cy="100" r="12" fill="#d5a642"/>
+    <rect x="225" y="140" width="160" height="8" fill="#c99b3b"/>
+
+    <!-- Headlight glow -->
+    <circle cx="495" cy="112" r="16" fill="#fff4b0"/>
+    <polygon points="508,105 730,30 730,210 508,125" fill="#fff2a3" opacity="0.18"/>
+
+    <!-- Wheels -->
+    <g>
+      <circle cx="170" cy="185" r="36" fill="#090909"/>
+      <circle cx="170" cy="185" r="18" fill="#777"/>
+      <circle cx="260" cy="185" r="36" fill="#090909"/>
+      <circle cx="260" cy="185" r="18" fill="#777"/>
+      <circle cx="355" cy="185" r="36" fill="#090909"/>
+      <circle cx="355" cy="185" r="18" fill="#777"/>
+      <circle cx="455" cy="185" r="30" fill="#090909"/>
+      <circle cx="455" cy="185" r="14" fill="#777"/>
+
+      <!-- Connecting rod -->
+      <line x1="170" y1="185" x2="355" y2="185" stroke="#c0c0c0" stroke-width="8"/>
+      <line x1="260" y1="185" x2="455" y2="185" stroke="#8e8e8e" stroke-width="5"/>
+    </g>
+
+    <!-- Reflections -->
+    <path d="M145 95 C230 70 330 80 425 95" stroke="#ffffff" stroke-width="4" opacity="0.25" fill="none"/>
+    <path d="M195 50 C230 40 260 45 290 55" stroke="#ffd36a" stroke-width="3" opacity="0.5" fill="none"/>
+  </g>
+
+  <!-- Foreground fog -->
+  <ellipse cx="600" cy="610" rx="520" ry="70" fill="white" opacity="0.15" filter="url(#blur)"/>
+
+  <!-- Cinematic vignette -->
+  <rect width="1200" height="700" fill="none" stroke="#000" stroke-width="80" opacity="0.18"/>
+</svg>
